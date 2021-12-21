@@ -60,7 +60,7 @@ public class ClientSourceGenerator : ISourceGenerator
 
         // Write class/interface declaration
         iface.WriteLine("public partial interface IClient");
-        impl.WriteLine("public partial class Client");
+        impl.WriteLine("internal partial class Client");
         WriteLineToAll("{", iface, impl);
 
         // Write method declarations
