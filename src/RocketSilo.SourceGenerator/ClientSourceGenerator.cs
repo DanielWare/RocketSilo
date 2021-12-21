@@ -74,8 +74,8 @@ public class ClientSourceGenerator : ISourceGenerator
 
         // Write close and finish
         WriteLineToAll("}", iface, impl);
-        context.AddSource("Client.g.cs", SourceText.From(impl.ToString(), Encoding.UTF8));
-        context.AddSource("IClient.g.cs", SourceText.From(iface.ToString(), Encoding.UTF8));
+        context.AddSource("Client.cs", SourceText.From(impl.ToString(), Encoding.UTF8));
+        context.AddSource("IClient.cs", SourceText.From(iface.ToString(), Encoding.UTF8));
     }
 
     private static string GenerateImplMethod(string methodName)
