@@ -5,7 +5,7 @@ public class GetAvailableLoansRequest : IApiRequest<GetAvailableLoansResponse>
 {
 }
 
-public class GetAvailableLoansResponse : IApiResponse
+public class GetAvailableLoansResponse : BaseResponse
 {
     public IEnumerable<LoanDefinition> Loans { get; set; } = Enumerable.Empty<LoanDefinition>();
 }

@@ -19,7 +19,7 @@ public class TransferGoodsFromYourStructureToAShipRequest : IApiRequest<Transfer
     }
 }
 
-public class TransferGoodsFromYourStructureToAShipResponse : IApiResponse
+public class TransferGoodsFromYourStructureToAShipResponse : BaseResponse
 {
     public StructureInventory Transfer { get; set; } = null!;
     public Structure Structure { get; set; } = null!;

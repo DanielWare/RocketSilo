@@ -19,7 +19,7 @@ public class DepositGoodsToAStructureRequest : IApiRequest<DepositGoodsToAStruct
     }
 }
 
-public class DepositGoodsToAStructureResponse : IApiResponse
+public class DepositGoodsToAStructureResponse : BaseResponse
 {
     public StructureInventory Deposit { get; set; } = null!;
     public Ship Ship { get; set; } = null!;

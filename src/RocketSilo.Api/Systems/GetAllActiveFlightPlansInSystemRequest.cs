@@ -12,7 +12,7 @@ public class GetAllActiveFlightPlansInSystemRequest : IApiRequest<GetAllActiveFl
     }
 }
 
-public class GetAllActiveFlightPlansInSystemResponse : IApiResponse
+public class GetAllActiveFlightPlansInSystemResponse : BaseResponse
 {
     public IEnumerable<FlightPlan> FlightPlans { get; set; } = Enumerable.Empty<FlightPlan>();
 }

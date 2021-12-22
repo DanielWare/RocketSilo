@@ -19,7 +19,7 @@ public class DepositGoodToAStructureYouOwnRequest: IApiRequest<DepositGoodToAStr
     }
 }
 
-public class DepositGoodToAStructureYouOwnResponse : IApiResponse
+public class DepositGoodToAStructureYouOwnResponse : BaseResponse
 {
     public StructureInventory Deposit { get; set; } = null!;
     public Ship Ship { get; set; } = null!;

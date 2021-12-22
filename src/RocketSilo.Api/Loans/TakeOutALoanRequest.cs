@@ -1,7 +1,7 @@
 ﻿namespace RocketSilo.Api.Loans;
 
 [RequestUrl("/my/loans", RequestMethod.POST)]
-public class TakeOutALoanRequest: IApiRequest<TakeOutALoanResponse>
+public class TakeOutALoanRequest : IApiRequest<TakeOutALoanResponse>
 {
     public TakeOutALoanRequest(string type)
     {
@@ -10,8 +10,8 @@ public class TakeOutALoanRequest: IApiRequest<TakeOutALoanResponse>
     public string Type { get; }
 }
 
-public class TakeOutALoanResponse : IApiResponse
+public class TakeOutALoanResponse : BaseResponse
 {
     public int Credits { get; set; }
-    public IEnumerable<Loan> Loans { get; set; } = Enumerable.Empty<Loan>();
+    public Loan Loan { get; set; } = null!;
 }

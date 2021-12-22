@@ -11,7 +11,7 @@ public class ClaimAUsernameRequest : IApiRequest<ClaimAUsernameResponse>
     }
 }
 
-public class ClaimAUsernameResponse : IApiResponse
+public class ClaimAUsernameResponse : BaseResponse
 {
     public string Token { get; set; } = null!;
     public User User { get; set; } = null!;

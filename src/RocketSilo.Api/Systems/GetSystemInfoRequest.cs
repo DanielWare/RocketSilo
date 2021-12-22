@@ -11,7 +11,7 @@ public class GetSystemInfoRequest : IApiRequest<GetSystemInfoResponse>
     }
 }
 
-public class GetSystemInfoResponse : IApiResponse
+public class GetSystemInfoResponse : BaseResponse
 {
     public SystemInfo System { get; set; } = null!;
 }

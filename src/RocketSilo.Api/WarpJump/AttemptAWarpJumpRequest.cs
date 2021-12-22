@@ -13,7 +13,7 @@ public class AttemptAWarpJumpRequest: IApiRequest<AttemptAWarpJumpResponse>
     }
 }
 
-public class AttemptAWarpJumpResponse : IApiResponse
+public class AttemptAWarpJumpResponse : BaseResponse
 {
     public FlightPlan FlightPlan { get; set; } = null!;
 }

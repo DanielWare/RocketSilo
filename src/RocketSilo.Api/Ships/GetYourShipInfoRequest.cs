@@ -11,7 +11,7 @@ public class GetYourShipInfoRequest : IApiRequest<GetYourShipInfoResponse>
     }
 }
 
-public class GetYourShipInfoResponse : IApiResponse
+public class GetYourShipInfoResponse : BaseResponse
 {
     public Ship Ship { get; set; } = null!;
 }

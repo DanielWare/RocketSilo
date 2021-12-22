@@ -11,7 +11,7 @@ public class PayOffYourLoanRequest : IApiRequest<PayOffYourLoanResponse>
     }
 }
 
-public class PayOffYourLoanResponse : IApiResponse
+public class PayOffYourLoanResponse : BaseResponse
 {
     public int Credits { get; set; }
     public IEnumerable<Loan> Loans { get; set; } = Enumerable.Empty<Loan>();

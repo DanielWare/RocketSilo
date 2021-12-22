@@ -5,7 +5,7 @@ public class GetAvailableGoodsRequest : IApiRequest<GetAvailableGoodsResponse>
 {
 }
 
-public class GetAvailableGoodsResponse : IApiResponse
+public class GetAvailableGoodsResponse : BaseResponse
 {
     public IEnumerable<GoodDefinition> Goods { get; set; } = Enumerable.Empty<GoodDefinition>();
 }

@@ -11,7 +11,7 @@ public class GetInfoOnALocationsMarketplaceRequest : IApiRequest<GetInfoOnALocat
     }
 }
 
-public class GetInfoOnALocationsMarketplaceResponse : IApiResponse
+public class GetInfoOnALocationsMarketplaceResponse : BaseResponse
 {
     public IEnumerable<Marketplace>? Marketplace { get; set; }
 }

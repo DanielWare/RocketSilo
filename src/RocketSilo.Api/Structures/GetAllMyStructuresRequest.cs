@@ -5,7 +5,7 @@ public class GetAllMyStructuresRequest: IApiRequest<GetAllMyStructuresResponse>
 {
 }
 
-public class GetAllMyStructuresResponse : IApiResponse
+public class GetAllMyStructuresResponse : BaseResponse
 {
     public IEnumerable<Structure> Structures { get; set; } = Enumerable.Empty<Structure>();
 }

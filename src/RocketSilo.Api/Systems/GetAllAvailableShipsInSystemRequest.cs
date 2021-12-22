@@ -10,7 +10,7 @@ public class GetAllAvailableShipsInSystemRequest : IApiRequest<GetAllAvailableSh
     }
 }
 
-public class GetAllAvailableShipsInSystemResponse : IApiResponse
+public class GetAllAvailableShipsInSystemResponse : BaseResponse
 {
     public IEnumerable<SystemShip> ShipListings { get; set; } = Enumerable.Empty<SystemShip>();
 }

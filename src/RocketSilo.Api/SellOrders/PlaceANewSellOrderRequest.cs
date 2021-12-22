@@ -17,7 +17,7 @@ public class PlaceANewSellOrderRequest : IApiRequest<PlaceANewSellOrderResponse>
     }
 }
 
-public class PlaceANewSellOrderResponse : IApiResponse
+public class PlaceANewSellOrderResponse : BaseResponse
 {
     public int Credits { get; set; }
     public Order Order { get; set; } = null!;

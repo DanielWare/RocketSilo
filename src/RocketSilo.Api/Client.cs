@@ -21,7 +21,7 @@ internal partial class Client : IClient
 
     private static readonly JsonSerializerOptions SerializerOptions = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
 
-    private async Task<TResponse> SendAsync<TRequest, TResponse>(TRequest request) where TRequest: IApiRequest<TResponse> where TResponse: IApiResponse
+    private async Task<TResponse> SendAsync<TRequest, TResponse>(TRequest request) where TRequest: IApiRequest<TResponse> where TResponse: BaseResponse
     {
         Attribute? requestUrlAttribute = Attribute.GetCustomAttribute(request.GetType(), typeof(RequestUrlAttribute));
         if (requestUrlAttribute is not RequestUrlAttribute requestUrl)
@@ -94,8 +94,7 @@ internal partial class Client : IClient
         HttpResponseMessage responseMessage = await httpClient.SendAsync(requestMessage);
         byte[] bytes = await responseMessage.Content.ReadAsByteArrayAsync();
         TResponse? responseObject = JsonSerializer.Deserialize<TResponse>(bytes, SerializerOptions);
-        if (responseObject is null)
-            throw new NullReferenceException();
+        if (responseObject is null) throw new InvalidOperationException($"Failed to deserialize response as {typeof(TResponse).Name}");
         return responseObject;
     }
 }

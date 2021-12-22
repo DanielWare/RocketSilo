@@ -12,7 +12,7 @@ public class SubmitFlightPlanRequest : IApiRequest<SubmitFlightPlanResponse>
     public string Destination { get; }
 }
 
-public class SubmitFlightPlanResponse : IApiResponse
+public class SubmitFlightPlanResponse : BaseResponse
 {
     public FlightPlan FlightPlan { get; set; } = null!;
 }

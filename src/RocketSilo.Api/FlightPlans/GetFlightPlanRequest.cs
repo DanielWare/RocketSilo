@@ -11,7 +11,7 @@ public class GetFlightPlanRequest : IApiRequest<GetFlightPlanResponse>
     public string FlightPlanId { get; }
 }
 
-public class GetFlightPlanResponse : IApiResponse
+public class GetFlightPlanResponse : BaseResponse
 {
     public FlightPlan FlightPlan { get; set; } = null!;
 }

@@ -13,7 +13,7 @@ public class GetLocationInfoForASystemRequest : IApiRequest<GetLocationInfoForAS
     }
 }
 
-public class GetLocationInfoForASystemResponse : IApiResponse
+public class GetLocationInfoForASystemResponse : BaseResponse
 {
     public IEnumerable<Location> Locations { get; set; } = Enumerable.Empty<Location>();
 }

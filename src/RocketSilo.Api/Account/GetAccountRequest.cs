@@ -3,9 +3,9 @@
 namespace RocketSilo.Api.Account;
 
 [RequestUrl("/my/account")]
-public class GetAccountRequest: IApiRequest<GetAccountResponse> { }
+public class GetAccountRequest : IApiRequest<GetAccountResponse> { }
 
-public class GetAccountResponse: IApiResponse
+public class GetAccountResponse : BaseResponse
 {
     public User User { get; set; } = null!;
 }

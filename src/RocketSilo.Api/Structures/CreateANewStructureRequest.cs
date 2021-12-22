@@ -13,7 +13,7 @@ public class CreateANewStructureRequest : IApiRequest<CreateANewStructureRespons
     }
 }
 
-public class CreateANewStructureResponse : IApiResponse
+public class CreateANewStructureResponse : BaseResponse
 {
     public Structure Structure { get; set; } = null!;
 }

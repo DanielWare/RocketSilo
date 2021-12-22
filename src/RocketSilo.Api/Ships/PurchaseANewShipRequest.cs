@@ -12,7 +12,7 @@ public class PurchaseANewShipRequest : IApiRequest<PurchaseANewShipResponse>
     public string Type { get; }
 }
 
-public class PurchaseANewShipResponse : IApiResponse
+public class PurchaseANewShipResponse : BaseResponse
 {
     public int Credits { get; set; }
     public Ship Ship { get; set; } = null!;

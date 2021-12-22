@@ -11,7 +11,7 @@ public class GetInfoOnALocationRequest : IApiRequest<GetInfoOnALocationResponse>
     }
 }
 
-public class GetInfoOnALocationResponse : IApiResponse
+public class GetInfoOnALocationResponse : BaseResponse
 {
     public Location Location { get; set; } = null!;
 }

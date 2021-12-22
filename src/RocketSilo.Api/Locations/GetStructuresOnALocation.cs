@@ -14,7 +14,7 @@ public class GetStructureStatusesOnALocationRequest : IApiRequest<GetStructureSt
     }
 }
 
-public class GetStructureStatusesOnALocationResponse : IApiResponse
+public class GetStructureStatusesOnALocationResponse : BaseResponse
 {
     public IEnumerable<StructureStatus> Structures { get; set; } = Enumerable.Empty<StructureStatus>();
 }

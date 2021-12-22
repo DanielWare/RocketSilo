@@ -5,7 +5,7 @@ public class GetAvailableStructuresRequest : IApiRequest<GetAvailableStructuresR
 {
 }
 
-public class GetAvailableStructuresResponse : IApiResponse
+public class GetAvailableStructuresResponse : BaseResponse
 {
     public IEnumerable<StructureDefinition> Structures { get; set; } = Enumerable.Empty<StructureDefinition>();
 }

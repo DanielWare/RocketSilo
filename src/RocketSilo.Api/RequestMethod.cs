@@ -10,10 +10,6 @@ public enum RequestMethod
 }
 
 // ReSharper disable once UnusedTypeParameter
-public interface IApiRequest<T> where T : IApiResponse
-{
-}
-
-public interface IApiResponse
+public interface IApiRequest<T> where T : BaseResponse
 {
 }

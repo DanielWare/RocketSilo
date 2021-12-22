@@ -5,7 +5,7 @@ public class GetAvailableShipsRequest : IApiRequest<GetAvailableShipsResponse>
 {
 }
 
-public class GetAvailableShipsResponse : IApiResponse
+public class GetAvailableShipsResponse : BaseResponse
 {
     public IEnumerable<ShipDefinition> Ships { get; set; } = Enumerable.Empty<ShipDefinition>();
 }

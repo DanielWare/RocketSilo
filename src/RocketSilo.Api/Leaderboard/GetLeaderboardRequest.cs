@@ -5,7 +5,7 @@ public class GetLeaderboardRequest : IApiRequest<GetLeaderboardResponse>
 {
 }
 
-public class GetLeaderboardResponse : IApiResponse
+public class GetLeaderboardResponse : BaseResponse
 {
     public IEnumerable<Networth> NetWorth { get; set; } = Enumerable.Empty<Networth>();
     public IEnumerable<Networth> UserNetWorth { get; set; } = Enumerable.Empty<Networth>();
