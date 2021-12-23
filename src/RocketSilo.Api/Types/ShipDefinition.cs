@@ -5,6 +5,7 @@ public class ShipDefinition : IComparable, IComparable<ShipDefinition>
     public string Class { get; set; } = null!;
     public string Manufacturer { get; set; } = null!;
     public int MaxCargo { get; set; }
+    public int LoadingSpeed { get; set; }
     public int Plating { get; set; }
     public int Speed { get; set; }
     public string Type { get; set; } = null!;
@@ -31,7 +32,7 @@ public class ShipDefinition : IComparable, IComparable<ShipDefinition>
         {
             return 1;
         }
-        
+
         if(Class.Length > other.Class.Length)
         {
             return 1;
